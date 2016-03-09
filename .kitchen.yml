@@ -1,0 +1,15 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows2012R2-tfs
+
+suites:
+  - name: default
+    run_list:
+      - recipe[envtest::default]
+    attributes:
